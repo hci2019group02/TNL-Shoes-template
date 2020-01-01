@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quản lí tài khoản cá nhân</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/styleadmin.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="SHORTCUT ICON" href="logo.png  ">
+<style>
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Rokkitt"
+};
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+	.leftcolumn {   
+  float: left;
+  width: 17%;
+
+};
+
+
+
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width: 1300px">
+
+	<!-- Sidebar/menu -->
+	<nav class="w3-sidebar w3-collapse w3-white w3-animate-left"
+		style="z-index: 3; width: 300px;" id="mySidebar">
+		<br>
+		<div class="w3-container">
+			<a href="#" onclick="w3_close()"
+				class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+				title="close menu"> <i class="fa fa-remove"></i>
+			</a> <img src="images/TNL.png" style="width: 45%;" class="w3-round"><br>
+			<br>
+			<h4>
+				<b>TNL Shoes</b>
+			</h4>
+				<h4 style="color: red">Xin chào, Nguyễn Thị An</h4>
+		</div>
+		
+		<div class="w3-bar-block">
+			<button class="tablinks active w3-button w3-white"
+						name="sp">Thông Tin Cá Nhân</button> <br>
+			<button class="tablinks w3-button w3-white w3-hide-small"
+						name="nv">Lịch Sử Mua Hàng</button> <br>
+			<button class="tablinks w3-button w3-white w3-hide-small"
+						name="tk">Theo Dõi Đơn Hàng</button>
+		</div>
+	</nav>
+
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large w3-animate-opacity"
+		onclick="w3_close()" style="cursor: pointer" title="close side menu"
+		id="myOverlay"></div>
+
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-main" style="margin-left: 300px">
+
+		<!-- Header -->
+		<header id="portfolio">
+			<a href="#"><img src="/w3images/avatar_g2.jpg"
+				style="width: 65px;"
+				class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+			<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey"
+				onclick="w3_open()"><i class="fa fa-bars"></i></span>
+			<div class="w3-container">
+			
+				<ul class="alignRight">
+					<a href="#"><button class="buttonlogin"><span>Đăng xuất</span></button></a>
+						<a href="index.html"><button class="buttonlogin"><span>Trang chủ</span></button></a>
+					<form action="">
+						<input type="text"> <input class="buttonlogin"
+							type="submit" value="Tìm kiếm">
+					</form>
+				</ul>
+				<p>
+				<div id="sp" class="tabcontent">
+						<h2 class="text-center _title">Thông tin cá nhân</h2>
+						<div class="table-responsive">
+							<div style="overflow-x: auto;">
+						 <table class="table  table-bordered">
+					  <tr>
+						<th width="200px">Họ tên</th>
+						<td width="700px">Nguyễn Thị An</td>
+						<td><button class="btn"><i class="fa fa-edit"></i> Sửa</button></td>
+					  </tr>
+					
+			
+					  <tr>
+						<th width="200px">Ngày sinh</th>
+						<td width="700px">21/09/1999</td>
+						<td><button class="btn"><i class="fa fa-edit"></i> Sửa</button></td>
+					  </tr>
+					  <tr>
+						<th width="200px">Giới tính</th>
+						<td width="700px">Nữ</td>
+						<td><button class="btn"><i class="fa fa-edit"></i> Sửa</button></td>
+					  </tr>
+					  <tr>
+						<th width="200px">Email</th>
+						<td width="700px">17130154@st.hcmuaf.edu.vn</td>
+						<td><button class="btn"><i class="fa fa-edit"></i> Sửa</button></td>
+					  </tr>
+					  <th width="200px">Số điện thoại</th>
+						<td width= "700px">012345679</td>
+					<td><button class="btn"><i class="fa fa-edit"></i> Sửa</button></td>
+					  </tr>
+					
+				  </table>
+							<h2 class="text-center _title">Thông tin tài khoản</h2>
+							  <table class="table  table-bordered">
+					
+					  <tr>
+						<th width="200px">Tên đăng nhập</th>
+						<td width="700px">Nguyễn Thị An</td>
+						<td><button class="btn"><i class="fa fa-edit"></i> Sửa</button></td>
+					  </tr>
+					
+					
+					  <tr>
+						<th width="200px">Mật khẩu</th>
+						<td width="700px">**********</td>
+						<td><button class="btn"><i class="fa fa-edit"></i> Sửa</button></td>
+					  </tr>
+					  
+					
+				  </table>
+							</div>
+						</div>
+			
+				</div>
+				<div id="nv" class="tabcontent">
+						<h2 class="text-center _title">Lịch sử mua hàng</h2>
+						<div class="table-responsive">
+						  <table class="table  table-bordered" >
+					<thead>
+					  <tr>
+						<th width="50px">Mã đơn</th>
+						<th style="padding:5px" width="600px">Danh sách sản phẩm</th>
+						<th width="100px">Giá</th>
+						<th width="80px">Số lượng</th>
+						<th width="100px">Tổng tiền</th>
+						<th>Thời gian</th>
+					
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td rowspan ="3" >DH0374</td>
+						<td >
+						<img src="images/giaytay02.png" class="img-fluid" alt="Free html5 bootstrap 4 template" style="width:20%;">
+						Giày tây buộc dây công sở cao cấp James Blanc
+						</td>
+						<td>1.200.000đ</td>
+						<td>1</td>
+						<td  rowspan ="3">3.600.000đ</td>
+						<td  rowspan ="3">18/11/2019 đến 20/11/2019</td>
+					
+					  </tr>
+					  <tr>
+						<td>
+						<img src="images/giaytay02.png" class="img-fluid" alt="Free html5 bootstrap 4 template" style="width:20%;">
+						
+						Giày tây buộc dây công sở cao cấp James Blanc
+						</td>
+							<td>1.200.000đ</td>
+						<td>1</td>
+						
+					  </tr>
+					  <tr>
+						<td>
+						<img src="images/giaytay02.png" class="img-fluid" alt="Free html5 bootstrap 4 template" style="width:20%;">
+					
+						Giày tây buộc dây công sở cao cấp James Blanc
+						
+						</td>
+						
+							<td>1.200.000đ</td>
+						<td>1</td>
+						
+					  </tr>
+					</tbody>
+					<tbody>
+					  <tr>
+						<td rowspan ="3">DH0375</td>
+						<td>
+						
+						<img src="images/giaytay02.png" class="img-fluid" alt="Free html5 bootstrap 4 template" style="width:20%;">
+					
+						Giày tây buộc dây công sở cao cấp James Blanc
+					
+						</td>
+							<td>1.200.000đ</td>
+						<td>1</td>
+						<td  rowspan ="3">2.300.000đ</td>
+						<td  rowspan ="3">23/11/2019 đến 25/11/2019</td>
+			
+					  </tr>
+					  <tr>
+						<td>
+						<img src="images/giaytay02.png" class="img-fluid" alt="Free html5 bootstrap 4 template" style="width:20%;">
+						
+						Giày tây buộc dây công sở cao cấp James Blanc
+						</td>
+							<td>1.200.000đ</td>
+						<td>1</td>
+						
+					  </tr>
+					
+					</tbody>
+				  </table>
+					</div>
+				</div>
+				<div id="tk" class="tabcontent">
+						<h2 class="text-center _title">Theo dõi đơn hàng</h2>
+						<div class="table-responsive">
+								  <table class="table  table-bordered" >
+					<thead>
+					  <tr>
+						<th>Mã đơn</th>
+						<th >Danh sách sản phẩm</th>
+						<th>Giá</th>
+						<th width="80px">Số lượng</th>
+						<th>Tổng tiền</th>
+						<th>Thời gian</th>
+						<th>Tình trạng</th>
+						<th></th>
+						
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td rowspan ="3">DH0376</td>
+						<td>
+						<img src="images/giaytay02.png" class="img-fluid" alt="Free html5 bootstrap 4 template" style="width:20%;">
+					
+						Giày tây buộc dây công sở cao cấp James Blanc
+						</td>
+						<td>1.200.000đ</td>
+						<td>1</td>
+						<td  rowspan ="3">3.600.000đ</td>
+						<td  rowspan ="3">18/12/2019 đến 20/12/2019</td>
+						<td  rowspan ="3" style='color:red'>Đang duyệt</td>
+						<td  rowspan ="3" ><button class="btn"><i class="fa fa-close"></i> Hủy</button></td>
+					  </tr>
+					  <tr>
+						<td>
+						<img src="images/giaytay02.png" class="img-fluid" alt="Free html5 bootstrap 4 template" style="width:20%;">
+			
+						Giày tây buộc dây công sở cao cấp James Blanc
+						</td>
+					<td>1.200.000đ</td>
+						<td>1</td>
+						
+					  </tr>
+					  <tr>
+						<td>
+						<img src="images/giaytay02.png" class="img-fluid" alt="Free html5 bootstrap 4 template" style="width:20%;">
+				
+						Giày tây buộc dây công sở cao cấp James Blanc
+						</td>
+						
+					<td>1.200.000đ</td>
+						<td>1</td>
+						
+					  </tr>
+					</tbody>
+
+				  </table>
+						
+						</div>
+				</div>
+				<!-- Footer -->
+
+				<div class="w3-black w3-center w3-padding-24">
+					Mẫu này được thiết kế bởi <a href="#"
+						title="W3.CSS" target="_blank" class="w3-hover-opacity">G02</a>
+				</div>
+
+				<!-- End page content -->
+			</div>
+			<script type="text/javascript">
+			var buttons = document.getElementsByClassName('tablinks');
+		    var contents = document.getElementsByClassName('tabcontent');
+		    function showContent(id) {
+		      for (var i = 0; i < contents.length; i++) {
+		        contents[i].style.display = 'none';
+		      }
+		      var content = document.getElementById(id);
+		      content.style.display = 'block';
+		    }
+		    for (var i = 0; i < buttons.length; i++) {
+		      buttons[i].addEventListener("click", function() {
+		        var id = this.name;
+		        for (var i = 0; i < buttons.length; i++) {
+		          buttons[i].classList.remove("active");
+		        }
+		        this.className += " active";
+		        showContent(id);
+		      });
+		    }
+		    showContent('sp');
+						// Script to open and close sidebar
+				function w3_open() {
+					document.getElementById("mySidebar").style.display = "block";
+					document.getElementById("myOverlay").style.display = "block";
+				}
+
+				function w3_close() {
+					document.getElementById("mySidebar").style.display = "none";
+					document.getElementById("myOverlay").style.display = "none";
+				}
+			</script>
+			
+</body>
+</html>

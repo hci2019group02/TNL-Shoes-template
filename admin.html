@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quản Lí cửa hàng</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/styleadmin.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="SHORTCUT ICON" href="logo.png  ">
+<style>
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Rokkitt"
+}
+.buttonadd {
+    display: inline-block;
+    border-radius: 3px;
+    background-color: green;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 4px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width: 1300px">
+
+	<!-- Sidebar/menu -->
+	<nav class="w3-sidebar w3-collapse w3-white w3-animate-left"
+		style="z-index: 3; width: 300px;" id="mySidebar">
+		<br>
+		<div class="w3-container">
+			<a href="#" onclick="w3_close()"
+				class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+				title="close menu"> <i class="fa fa-remove"></i>
+			</a> <img src="images/TNL.png" style="width: 45%;" class="w3-round"><br>
+			<br>
+			<h4>
+				<b>TNL Shoes</b>
+			</h4>
+				<h4 style="color: red">Xin chào, Admin</h4>
+		</div>
+		
+		<div class="w3-bar-block">
+			<button class="tablinks active w3-button w3-white"
+						name="sp">Sản Phẩm</button> <br>
+			<button class="tablinks w3-button w3-white w3-hide-small"
+						name="nv">Nhân Viên</button> <br>
+			<button class="tablinks w3-button w3-white w3-hide-small"
+						name="tk">Tài Khoản</button>
+		</div>
+	</nav>
+
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large w3-animate-opacity"
+		onclick="w3_close()" style="cursor: pointer" title="close side menu"
+		id="myOverlay"></div>
+
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-main" style="margin-left: 300px">
+
+		<!-- Header -->
+		<header id="portfolio">
+			<a href="#"><img src="/w3images/avatar_g2.jpg"
+				style="width: 65px;"
+				class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+			<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey"
+				onclick="w3_open()"><i class="fa fa-bars"></i></span>
+			<div class="w3-container">
+			
+				<ul class="alignRight">
+					<a href="#"><button class="buttonlogin"><span>Logout</span></button></a>
+						<a href="index.html"><button class="buttonlogin"><span>Trang chủ</span></button></a>
+					<form action="">
+						<input type="text"> <input class="buttonlogin"
+							type="submit" value="search">
+					</form>
+				</ul>
+				
+				<p>
+				<div id="sp" class="tabcontent">
+						<h2 class="text-center _title">Danh sách sản phẩm</h2>
+						<div align="right">
+									<button class="buttonadd" >Thêm sản phẩm</button>
+								</div>
+						<div class="table-responsive">
+							<div style="overflow-x: auto;">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th width="50px">STT</th>
+											<th >Mã SP</th>
+											<th >Tên sản phẩm</th>
+											<th >Hình ảnh</th>
+											<th >Giá</th>
+											<th >Số lượng nhập</th>
+											<th >Số lượng bán</th>
+											<th width="100px">Thao tác</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>SP1</td>
+											<td>Giày tây buộc dây công sở cao cấp James Blanc da trơn màu đen (JB-199)</td>
+											<td><img src="images/giaytay02.png" width="50" height="50"></td>
+											<td>1.200.000đ</td>
+											<td>20</td>
+											<td>5</td>
+
+											<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>SP2</td>
+											<td>Giày tây nam buộc dây da bóng GN725</td>
+											<td><img src="images/giaytay03.jpg" width="50" height="50"></td>
+											<td>599.000đ</td>
+											<td>20</td>
+											<td>5</td>
+
+											<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>SP3</td>
+											<td>Giày tây nam Oxford da trơn cao cấp GN660</td>
+											<td><img src="images/giaytay04.jpg" width="50" height="50"></td>
+											<td>1.200.000đ</td>
+											<td>20</td>
+											<td>5</td>
+
+											<td>
+											<button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>SP4</td>
+											<td>Giày nữ cao gót Sovo sọc ngang đa màu sắc</td>
+											<td><img src="images/giaytay04.jpg" width="50" height="50"></td>
+											<td>1.000.000đ</td>
+											<td>20</td>
+											<td>5</td>
+
+											<td>
+											<button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>SP5</td>
+											<td>Giày búp bê nữ Sovo 19B001 đính nơ thời trang</td>
+											<td><img src="images/giaytay04.jpg" width="50" height="50"></td>
+											<td>987.000đ</td>
+											<td>20</td>
+											<td>5</td>
+
+											<td>
+											<button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button>
+											</td>
+										</tr>
+									</tbody>
+									
+								</table>
+							</div>
+						</div>
+			
+				</div>
+				<div id="nv" class="tabcontent">
+						<h2 class="text-center _title">Danh sách nhân viên</h2>
+						<div align="right">
+									<button class="buttonadd" >Thêm nhân viên</button>
+								</div>
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th width="50px">STT</th>
+										<th>Mã NV</th>
+										<th>Tên nhân viên</th>
+										<th>Lương cơ bản</th>
+										<th>Tiền thưởng</th>
+										<th>Chức vụ</th>
+										<th>Ngày vào làm</th>
+										<th width="100px">Thao tác</th>
+									</tr>
+								</thead>
+								
+								<tr>
+									<td>1</td>
+									<td>NV1</td>
+									<td>Huỳnh Thị Tuyết Nhi</td>
+									<td>8.000.000đ</td>
+									<td>1.200.000đ</td>
+									<td>Quản lí</td>
+									<td>12/12/2015</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>NV2</td>
+									<td>Nguyễn Đoàn Minh Nhật</td>
+									<td>8.000.000đ</td>
+									<td>1.200.000đ</td>
+									<td>Quản lí</td>
+									<td>12/12/2015</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>NV3</td>
+									<td>Nguyễn Hữu Lộc</td>
+									<td>8.000.000đ</td>
+									<td>1.200.000đ</td>
+									<td>Quản lí</td>
+									<td>12/12/2015</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>NV14</td>
+									<td>Trần Trung Thảo</td>
+									<td>8.000.000đ</td>
+									<td>1.000.000đ</td>
+									<td>Quản lí</td>
+									<td>12/12/2015</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>NV5</td>
+									<td>Trần Minh Nguyên</td>
+									<td>8.000.000đ</td>
+									<td>987.000đ</td>
+									<td>Nhân viên</td>
+									<td>12/12/2015</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+									<tr>
+									<td>6</td>
+									<td>NV6</td>
+									<td>Văn Hoài An</td>
+									<td>8.000.000đ</td>
+									<td>987.000đ</td>
+									<td>Nhân viên</td>
+									<td>12/12/2015</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+									<tr>
+									<td>7</td>
+									<td>NV7</td>
+									<td>Trần Lê Diệu Tường</td>
+									<td>8.000.000đ</td>
+									<td>987.000đ</td>
+									<td>Nhân viên</td>
+									<td>12/12/2015</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								</table>
+							
+					</div>
+				</div>
+				<div id="tk" class="tabcontent">
+						<h2 class="text-center _title">Danh sách tài khoản</h2>
+						<div align="right">
+									<button class="buttonadd" >Thêm tài khoản</button>
+								</div>
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th width="50px">STT</th>
+										<th >Tên chủ tài khoản</th>
+										<th >Giới tính</th>
+										<th >Ngày sinh</th>
+										<th >Tên đăng nhập</th>
+										<th >Quyền truy cập</th>
+										<th width="100px">Thao tác</th>
+									</tr>
+								</thead>
+
+								<tr>
+									<td >1</td>
+									<td>Huỳnh Thị Tuyết Nhi</td>
+									<td>Nữ</td>
+									<td>21/09/1999</td>
+									<td>nhihuynh</td>
+									<td>superadmin</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Nguyễn Đoàn Minh Nhật</td>
+									<td>Nam</td>
+									<td>04/11/1997</td>
+									<td>nhatnguyen</td>
+									<td>admin</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Nguyễn Hữu Lộc</td>
+									<td>Nam</td>
+									<td>04/11/1998</td>
+									<td>locnguyen</td>
+									<td>admin</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Trần Trung Thảo</td>
+									<td>Nam</td>
+									<td>04/01/1999</td>
+									<td>trungthao</td>
+									<td>admin</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Trần Minh Nguyên</td>
+									<td>Nam</td>
+									<td>11/11/1999</td>
+									<td>nguyentran</td>
+									<td>admin</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>Lê Nguyên</td>
+									<td>Nam</td>
+									<td>11/11/1999</td>
+									<td>nguyenle</td>
+									<td>customer</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>Vũ Hoài An</td>
+									<td>Nam</td>
+									<td>11/11/1999</td>
+									<td>anvuhoai</td>
+									<td>customer</td>
+									<td><button class="btn"><i class="fa fa-trash"></i></button>
+											<button class="btn"><i class="fa fa-edit"></i></button></td>
+								</tr>
+						
+							
+							</table>
+							
+						</div>
+				</div>
+				<!-- Footer -->
+
+				<div class="w3-black w3-center w3-padding-24">
+					Mẫu này được thiết kế bởi <a href="#"
+						title="W3.CSS" target="_blank" class="w3-hover-opacity">G02</a>
+				</div>
+
+				<!-- End page content -->
+			</div>
+			<script type="text/javascript">
+			var buttons = document.getElementsByClassName('tablinks');
+		    var contents = document.getElementsByClassName('tabcontent');
+		    function showContent(id) {
+		      for (var i = 0; i < contents.length; i++) {
+		        contents[i].style.display = 'none';
+		      }
+		      var content = document.getElementById(id);
+		      content.style.display = 'block';
+		    }
+		    for (var i = 0; i < buttons.length; i++) {
+		      buttons[i].addEventListener("click", function() {
+		        var id = this.name;
+		        for (var i = 0; i < buttons.length; i++) {
+		          buttons[i].classList.remove("active");
+		        }
+		        this.className += " active";
+		        showContent(id);
+		      });
+		    }
+		    showContent('sp');
+						// Script to open and close sidebar
+				function w3_open() {
+					document.getElementById("mySidebar").style.display = "block";
+					document.getElementById("myOverlay").style.display = "block";
+				}
+
+				function w3_close() {
+					document.getElementById("mySidebar").style.display = "none";
+					document.getElementById("myOverlay").style.display = "none";
+				}
+			</script>
+			
+</body>
+</html>
